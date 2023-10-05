@@ -14,12 +14,41 @@ const bigNmber = 3343923050092090950n // // typeof = undefined
 
 //Reference (Non primitive)
 //Arrays, Objects, Functions
-const heros = [ "superman", "spiderman", " ironman", "batman"]
+const heros = [
+ 
+ "superman", "spiderman", " ironman", "batman"]
  let myObj = {  
   name: " Maria",
   age: "33",
     }
 
 const myFunction = function(){console.log("Hello world");} // function//typeof = function
+//------------------------------------------------------------------------------------------------
 
+//Memory
+//Stack( stack memory use in primitive type), Heap( heap memory use in non primitive type)
+
+let myLectureName = "datatypesummary"
+let anotherName = myLectureName 
+anotherName ="newName"
+console.log (myLectureName );// datatypessummary
+console.log(anotherName); // newName
+let userOne ={
+ email:"user@google.com",
+ upi: "user@ybl"
+}
+let userTwo = userOne
+ 
+userTwo.email = "rabia@google.com"
+console.log(userOne.email);// email change in both users( userOne and userTwo)
+console.log(userTwo.email);
+
+
+
+
+
+
+
+
+ 
 
