@@ -2,7 +2,7 @@
 console.log('Rabia');
 const accountId=144553
 let accountEmail="rabia.s@gmail.com"
-varaccountPassword="12345"
+var accountPassword="12345"
 accountCity="Frankfurt"
 // in javascript you can use directly variable value without mentioning var or let in begning but best way is to put let in the begning//
 
