@@ -1,3 +1,4 @@
+
 // function is basically packed the code and this package's copy you can use anywhere and anytime
 
 function sayMyName (){
@@ -53,4 +54,59 @@ function addTwoNumbers(number1, number2){
 }
 
 const result = addTwoNumbers(3,4)
-console.log("Result: ", result); //  Result: 7
+console.log("Result: ", result); //  Result: 7 
+
+
+
+// how many ways user can take values in parameters
+function loginUserMessage (username){
+    return `${username} just logged in`
+}
+console.log(loginUserMessage("Rabia")); 
+loginUserMessage ("Rabia") // nothing appear although function has executed and function has return the value but we did not iform it to print the value to store the value in the variable
+console.log(loginUserMessage("Rabia")); // Rabia  just logged in // because i gave the instruction to print through console.log
+console.log(loginUserMessage()); // for example if the method is called  but did not pass any value then result would be "undeinef just logged in" 
+
+// then we have to check if the value is presnt or not by using " if else" method
+
+function loginUserMessage (username){
+    if (username===undefined) {
+        console.log("Please enter a username");  
+    }
+    return `${username} just logged in`
+}
+console.log(loginUserMessage("Rabia"));//  Please enter a username  undefined just logged in
+
+// if i want that return should not execute then just write return inside the if function
+
+function loginUserMessage (username){
+    if (username===undefined) {
+        console.log("Please enter a username"); 
+        return 
+    }
+    return `${username} just logged in`
+}
+console.log(loginUserMessage("Rabia")); // Please enter a user name  undefined
+
+
+// use of ! mark
+
+function loginUserMessage (username){
+    if (!username) {
+        console.log("Please enter a username"); 
+        return 
+    }
+    return `${username} just logged in`
+}
+console.log(loginUserMessage("Rabia")); //Please enter a user name  undefined
+
+// if you want to avoid the undefined situation then you can use the default value and when you pass any value then it would override default value
+
+function loginUserMessage (username="sam"){
+    if (!username) {
+        console.log("Please enter a username"); 
+        return 
+    }
+    return `${username} just logged in`
+}
+console.log(loginUserMessage("Rabia")); // sam just logged in// because by using default value if fnction would not executed as it is for when username is undefined
