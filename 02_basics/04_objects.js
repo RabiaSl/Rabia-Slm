@@ -64,3 +64,31 @@ console.log(Object.entries(meetingUser)); // [['id', '123abc'], ['name' 'Samy'],
 
 // ask if you have value
 console.log(meetingUser. hasOwnProperty('isLoggedIn')); // true
+
+
+// destructuring of object
+
+
+const course ={
+   coursename: "js in english",
+   courseInstructor : "Rabia",
+   price: "500"  
+}
+
+course.courseInstructor  // print the 
+
+//if you want to make code clean then make it non repetative or small
+
+const {courseInstructor} = (course) // 
+console.log(courseInstructor); // Rabia // instead of writing course.courseInstructor just destructure it  and write courseInstruce.
+const{courseInstructor:instructor} = (course) // if you feel that courseInstructor is a lengthy name then make it further small.
+console.log(instructor); // Rabia
+
+
+// API these are not object because object has name,  herein jason keys and values of keys behave like string.
+{
+"coursename": "js in english"
+   "courseInstructor" : "Rabia",
+   "price": "free"  
+}
+
