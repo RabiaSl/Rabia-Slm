@@ -110,3 +110,74 @@ function loginUserMessage (username="sam"){
     return `${username} just logged in`
 }
 console.log(loginUserMessage("Rabia")); // sam just logged in// because by using default value if fnction would not executed as it is for when username is undefined
+
+//  Add price in shopping cart
+
+
+function CalculateCartPrice(num1) {
+    return num1
+    
+}
+
+console.log(CalculateCartPrice (2)); // 2
+
+
+// but if more than values are added in my cart
+
+console.log(CalculateCartPrice (200,400,500)); // 200 first items appear but how we can use other values as well in this case we should use rest operator
+
+// if i have more than one values then i should rest operator which is similar to spread opertor
+
+function CalculateCartPrice(...num1) {
+    return num1
+    
+}
+
+console.log(CalculateCartPrice (200,400,500)); // [200,400,500] // basically how we pass parameters by using rest operator in function
+
+function CalculateCartPrice(value1, value2,...num1) {
+    return num1
+    
+}
+
+console.log(CalculateCartPrice (200,400,500,2000)); // [500,2000]
+
+
+// objects
+
+const user = {
+
+    username: "Rabia",
+    price:199
+}
+
+function handleObject(anyobject) {
+    console.log(`Username is ${anyobject.username} and price isv${anyobject.price}` );
+    
+}
+handleObject(user) // Username is Rabia and price is 199
+
+
+// but problem can come if we write prices instead of price in const user then price would be undefined thats why you have to make sure that the values i am passing has the same data type or not
+  // object can pass directly as well
+
+handleObject({
+    username:"Sam",
+    price:399
+
+}) // Username is Sam and price is 399
+
+// we can also pass arrays as like objects in functions
+
+// we are passing array by putting in variabke which is myNewArray
+
+const myNewArray =[200,400,600]
+function returnSecondValue(getArray) {
+    return getArray[1]
+    
+}
+console.log(returnSecondValue(myNewArray)); // 400
+
+
+// we can also pass array directly without using variable
+console.log(returnSecondValue([200,400,600])); // 400
