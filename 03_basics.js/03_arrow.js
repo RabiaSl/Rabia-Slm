@@ -71,3 +71,43 @@ console.log(addTwo (3,4)) //
 
 const myArray = [2,3,4,5]
 myArray.forEach () => ()
+
+
+
+
+// Immediate Invoked function expession. This function which execute immediately and we use to avoid the pollution from the global scope 
+
+function chai(){
+
+  console.log(`DB CONNECTED`);
+}
+
+chai(); // DB CONNECTED//  // DB CONNECTED // we used semi colun to end the context
+  
+( function aurcode() {
+  cosole.log(`DB CONNECTED TWO`
+})()  // DB CONNECTED // we used semi colun to end the context
+  
+// we can also write this function in form of arow function
+  
+(function chai(){
+
+  console.log(`DB CONNECTED`);
+})(); // DB CONNECTED//  // DB CONNECTED // we used semi colun to end the context
+  
+( () => {
+  cosole.log(`DB CONNECTED TWO`
+})() // DB CONNECTED TWO
+
+// if console log expect variable
+  
+(function chai(){
+
+  console.log(`DB CONNECTED`);
+})(); // DB CONNECTED
+  
+( (name) => {
+  cosole.log(`DB CONNECTED TWO ${name}`
+} )('hitesh') //  DB CONNECTED TWO hitesh
+
+
